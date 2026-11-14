@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun, Novia Lailia</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/nailong-real-1.png">
+
+  <!-- Google Fonts: Poppins, Caveat, Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================
+       1. HERO SECTION
+       =================================================== -->
+  <section class="hero-section" id="heroSection">
+    <!-- Ambient Background Video -->
+    <div class="hero-video-bg" aria-hidden="true">
+      <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+        <source src="/assets/lailia/vid1.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <canvas id="heroCanvas" class="confetti-canvas"></canvas>
+
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        Selamat Ulang Tahun,
+        <span class="birthday-name-heading">Novia Lailiaaa</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Semoga di hari yang istimewa ini, kamu selalu dilimpahi kesehatan, kebahagiaan, kesuksesan, dan segala hal baik senantiasa menyertai setiap langkah ke depan.
+      </p>
+
+      <!-- Hero Portrait Image -->
+      <div class="nailong-hero-wrap">
+        <img src="/assets/lailia/51.jpg" alt="Foto Novia Lailia" class="nailong-hero-img" width="260" height="320">
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#cakeSection" class="btn-primary">
+          Tiup Lilin
+        </a>
+        <a href="#gallerySection" class="btn-secondary">
+          Galeri
+        </a>
+        <a href="#wishesSection" class="btn-secondary">
+          Ucapan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       2. GALLERY SECTION (POLAROID CARDS)
+       =================================================== -->
+  <section class="gallery-section" id="gallerySection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Galeri</span>
+        <h2 class="section-title">Koleksi Momen</h2>
+        <p class="section-desc">Kumpulan potret dan cerita di berbagai kesempatan.</p>
+      </div>
+
+      <div class="polaroid-grid">
+        <!-- Photo 1: Kulineran malam -->
+        <div class="polaroid-card" data-memory="night.">
+          <div class="polaroid-photo-wrapper">
+            <img class="polaroid-img" src="/assets/lailia/1.jpeg" alt="Suasana Malam">
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title"></div>
+            <div class="polaroid-date"></div>
+          </div>
+        </div>
+
+        <!-- Photo 2: Ngopi di Singgah -->
+        <div class="polaroid-card" data-memory="Singgah.">
+          <div class="polaroid-photo-wrapper">
+            <img class="polaroid-img" src="/assets/lailia/2.jpeg" alt="Waktu Ngopi">
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title"></div>
+            <div class="polaroid-date"></div>
+          </div>
+        </div>
+
+        <!-- Photo 3: Depan cermin -->
+        <div class="polaroid-card" data-memory="Cinema.">
+          <div class="polaroid-photo-wrapper">
+            <img class="polaroid-img" src="/assets/lailia/3.jpeg" alt="Di Depan Cermin">
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title"></div>
+            <div class="polaroid-date"></div>
+          </div>
+        </div>
+
+        <!-- Photo 4: Di stasiun kereta -->
+        <div class="polaroid-card" data-memory="Station.">
+          <div class="polaroid-photo-wrapper">
+            <img class="polaroid-img" src="/assets/lailia/4.jpg" alt="Peron Stasiun">
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title"></div>
+            <div class="polaroid-date"></div>
+          </div>
+        </div>
+
+        <!-- Photo 5: Kafe vintage -->
+        <div class="polaroid-card" data-memory="Malang.">
+          <div class="polaroid-photo-wrapper">
+            <img class="polaroid-img" src="/assets/lailia/5.jpg" alt="Sudut Klasik">
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title"></div>
+            <div class="polaroid-date"></div>
+          </div>
+        </div>
+
+        <!-- Photo 6: Bakpao -->
+        <div class="polaroid-card" data-memory="-">
+          <div class="polaroid-photo-wrapper">
+            <img class="polaroid-img" src="/assets/lailia/6.jpeg" alt="Bakpao Hangat">
+          </div>
+          <div class="polaroid-caption">
+            <div class="polaroid-title"></div>
+            <div class="polaroid-date"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Polaroid Lightbox Modal -->
+  <div id="polaroidModal" class="modal-overlay">
+    <div class="modal-polaroid-box">
+      <button id="modalCloseBtn" class="modal-close-btn" aria-label="Tutup modal">&times;</button>
+      <div style="background: #FDFBF7; border-radius: 8px; padding: 0.5rem; margin-bottom: 0.5rem;">
+        <img id="modalImg" class="modal-photo-img" src="" alt="Detail Foto">
+      </div>
+      <div class="modal-text-content">
+        <h3 id="modalTitle" class="modal-title"></h3>
+        <p id="modalDesc" class="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================
+       3. INTERACTIVE "MAKE A WISH" (TIUP LILIN VIRTUAL)
+       =================================================== -->
+  <section class="cake-section" id="cakeSection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Make A Wish</span>
+        <h2 class="section-title">Waktunya Tiup Lilin</h2>
+        <p class="section-desc">Pejamkan mata sejenak, panjatkan doa terbaik di hati, lalu tiup lilinnya.</p>
+      </div>
+
+      <div class="cake-stage">
+        <!-- Birthday Cake Visual -->
+        <div class="birthday-cake-visual">
+          <div class="cake-plate"></div>
+          <div class="cake-bottom-tier">
+            <div class="cake-bottom-frosting"></div>
+          </div>
+          <div class="cake-top-tier">
+            <div class="cake-top-frosting"></div>
+          </div>
+          <div class="strawberry-row">
+            <div class="strawberry"></div>
+            <div class="strawberry"></div>
+            <div class="strawberry"></div>
+            <div class="strawberry"></div>
+          </div>
+          <div id="cakeCandle" class="cake-candle">
+            <div class="candle-wick"></div>
+            <div class="candle-flame"></div>
+            <div class="candle-smoke"></div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button id="blowCandleBtn" class="btn-primary" style="font-size: 1.05rem; padding: 0.95rem 2.25rem;">
+            Tiup Lilin Sekarang
+          </button>
+          <button id="relightCandleBtn" class="btn-secondary" style="display: none;">
+            Nyalakan Lilin Lagi
+          </button>
+        </div>
+
+        <!-- Wish Confirmation & Blessing Card -->
+        <div id="wishSuccessCard" class="wish-success-card">
+          <h3 style="font-family: var(--font-display); color: var(--color-mocha); margin-bottom: 0.75rem; font-size: 1.6rem;">
+            Lilin Berhasil Ditiup
+          </h3>
+          <p style="font-size: 1rem; color: #5C4033; line-height: 1.75;">
+            Selamat ulang tahun, <span class="birthday-name-text">Lailiaa</span>. Semoga setiap doa, harapan baik, dan cita-cita yang dipanjatkan lekas dikabulkan. Sehat, bahagia, dan sukses selalu di usia yang baru.
+          </p>
+          <!-- Celebrate Mascot Image -->
+          <img src="/assets/nailong-real-10.png" alt="Perayaan" class="nailong-celebrate-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       4. WISHES BOARD (BUKU TAMU / UCAPAN TEMAN)
+       =================================================== -->
+  <section class="wishes-section" id="wishesSection">
+    <div class="container wishes-container">
+      <div class="section-header">
+        <span class="section-tag">Pesan</span>
+        <h2 class="section-title">Ucapan dan Doa </h2>
+        <p class="section-desc">Tuliskan pesan ucapan selamat dan doa terbaikmu.</p>
+      </div>
+
+      <div class="wishes-layout">
+        <!-- Form Submission Card -->
+        <div class="wish-form-card">
+          <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.5rem;">
+            <img src="/assets/nailong-real-1.png" alt="Avatar" style="width: 44px; height: 44px; object-fit: contain;">
+            <div>
+              <h3 style="font-size: 1.15rem; color: var(--color-mocha);">Tulis Ucapan</h3>
+            </div>
+          </div>
+
+          <form id="wishForm">
+            <div class="form-group">
+              <label for="wishName" class="form-label">Nama</label>
+              <input type="text" id="wishName" class="form-input" placeholder="Nama" required maxlength="50">
+            </div>
+
+            <div class="form-group">
+              <label for="wishMessage" class="form-label">Pesan dan Doa</label>
+              <textarea id="wishMessage" class="form-textarea" placeholder="Tuliskan ucapan dan doa terbaikmu..." required maxlength="600"></textarea>
+            </div>
+
+            <button type="submit" id="btnSubmitWish" class="btn-submit-wish">
+              Kirim Ucapan
+            </button>
+          </form>
+        </div>
+
+        <!-- Wishes Stream -->
+        <div class="wishes-stream-wrapper">
+          <div class="wishes-board-header">
+            <h3 style="font-size: 1.25rem; color: var(--color-mocha);">Daftar Ucapan</h3>
+            <span id="wishesCountBadge" class="wishes-count-pill">Memuat...</span>
+          </div>
+
+          <!-- Dynamic Wishes Cards Grid -->
+          <div id="wishesGrid" class="wishes-grid">
+            <!-- Wishes will be injected by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toastNotice" class="toast-notice"></div>
+
+  <!-- ===================================================
+       FOOTER
+       =================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-love">Selamat Ulang Tahun, <span class="birthday-name-text">Novia Lailiaaa</span></div>
+      <p style="font-size: 0.95rem;">Semoga selalu sehat, bahagia, dan tercapai semua impian.</p>
+      <p style="font-size: 0.8rem; margin-top: 0.75rem; opacity: 0.7;">&copy; 2026 - ali.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/audio.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

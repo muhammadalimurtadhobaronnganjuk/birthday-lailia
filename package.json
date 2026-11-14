@@ -1,0 +1,23 @@
+{
+  "name": "ultah-microsite",
+  "version": "1.0.0",
+  "description": "Website ucapan ulang tahun interaktif untuk Novia Lailia",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "birthday",
+    "microsite"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
