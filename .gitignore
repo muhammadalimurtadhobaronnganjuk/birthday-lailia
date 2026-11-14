@@ -21,3 +21,7 @@ Desktop.ini
 # Editor directories
 .vscode/
 .idea/
+
+# Vercel build output
+.vercel/
+

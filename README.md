@@ -40,6 +40,13 @@ http://localhost:3000/?nama=Novia+Lailia
 
 ---
 
-## 🚀 Panduan Publikasi ke Render.com:
-Panduan langkah demi langkah untuk mempublikasikan website ini ke internet secara online dan gratis melalui Render.com tersedia di:
+## 🚀 Panduan Publikasi ke Internet (Deploy):
+
+### Pilihan Utama: Vercel (Rekomendasi - 100% Gratis & Tanpa Kartu Kredit)
+Panduan langkah demi langkah deploy ke Vercel tanpa perlu kartu kredit, tanpa mode tidur, dan super cepat:  
+👉 **[PANDUAN_DEPLOY_VERCEL.md](PANDUAN_DEPLOY_VERCEL.md)**
+
+### Alternatif: Render.com
+Panduan publikasi menggunakan Render.com:  
 👉 **[PANDUAN_DEPLOY_RENDER.md](PANDUAN_DEPLOY_RENDER.md)**
+
