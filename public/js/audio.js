@@ -5,7 +5,7 @@
 
 class AudioManager {
   constructor() {
-    this.bgm = new Audio('/assets/shape-of-my-heart.mp3');
+    this.bgm = new Audio('/assets/reff-shape-of-myheart.mpeg');
     this.bgm.loop = true;
     this.bgm.volume = 0.55;
     this.bgm.preload = 'auto';
