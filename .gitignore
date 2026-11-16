@@ -17,6 +17,7 @@ Desktop.ini
 
 # Temp files
 *.tmp
+t
 
 # Editor directories
 .vscode/
